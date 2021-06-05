@@ -18,7 +18,6 @@ RUN apt-update -qq && apt install -qqy --no-install-recommends install yarn
 RUN curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.38.0/install.sh | bash
 RUN nvm i stable
 
-
 # Install the NodeJS app in the container
 WORKDIR /usr/src/app
 
