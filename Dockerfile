@@ -1,5 +1,6 @@
 FROM ubuntu:18.04
 
+# Define a volume for mounting the host pipe
 VOLUME /host_pipe
 
 # Install the basics
