@@ -1,0 +1,20 @@
+{
+  "name": "docker-named-pipes",
+  "version": "1.0.0",
+  "description": "Proof of concept using named pipes to execute commands on the host machine from the container.",
+  "main": "run-cmd.js",
+  "scripts": {
+    "start": "node ./run-cmd"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/spidercatnat/docker-named-pipes.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/spidercatnat/docker-named-pipes/issues"
+  },
+  "homepage": "https://github.com/spidercatnat/docker-named-pipes#readme"
+}

@@ -1,0 +1,8 @@
+version: "3"
+services:
+  runner:
+    build: .
+    volumes:
+      # Named pipe exists on host at /host_pipe/named_pipe,
+      # and will be mounted in the container at /host_pipe
+      - ./host-pipe:/host-pipe
