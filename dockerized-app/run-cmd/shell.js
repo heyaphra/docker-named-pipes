@@ -1,23 +1,15 @@
-const { spawn } = require("child_process");
+const { exec } = require("child_process");
 
-module.exports = function (cmd, args) {
+module.exports = function (cmd) {
   return new Promise((resolve, reject) => {
-    const sh = spawn(cmd, args);
-
-    sh.stdout.on("data", (data) => {
-      console.log(`stdout: ${data}`);
-    });
-
-    sh.stderr.on("data", (data) => {
-      console.log(`stdout: ${data}`);
-    });
-
-    sh.on("close", (code) => {
-      resolve(`child process exited with code ${code}`);
-    });
-
-    sh.on("error", (err) => {
-      reject(err);
+    exec(cmd, (error, stdout, stderr) => {
+      if (error) {
+        reject(`exec error: ${error}`);
+      } else {
+        console.log(`stdout: ${stdout}`);
+        console.error(`stderr: ${stderr}`);
+        resolve();
+      }
     });
   });
 };

@@ -1,6 +1,8 @@
 version: "3"
 services:
   runner:
+    tty: true
+    stdin_open: true 
     build: .
     volumes:
       # Named pipe exists on host at /host_pipe/named_pipe,
